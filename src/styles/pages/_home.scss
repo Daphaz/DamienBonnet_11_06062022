@@ -1,0 +1,51 @@
+.home {
+  &__hero {
+    @extend %center;
+    position: relative;
+    width: 100%;
+    height: 223px;
+    overflow: hidden;
+    border-radius: $rad-xl;
+    color: $clr-white;
+    padding: 32px 16px;
+    transition: all 0.3s ease;
+
+    @include md {
+      justify-content: flex-start;
+    }
+
+    @include sm {
+      height: 111px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      background: $clr-black;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    span {
+      @extend %title-48;
+      z-index: 1;
+
+      @include md {
+        max-width: 217px;
+        line-height: 1;
+      }
+    }
+  }
+}
