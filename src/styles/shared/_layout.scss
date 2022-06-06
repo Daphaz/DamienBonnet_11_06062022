@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+%between {
+  @extend %align;
+  justify-content: space-between;
+}
+
 %center {
   @extend %align;
   justify-content: center;

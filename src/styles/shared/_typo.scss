@@ -6,13 +6,9 @@
 }
 
 %link {
-  font-size: clamp(12px, 4.5vw, 24px);
+  font-size: clamp(12px, 3.2vw, 24px);
   line-height: 1.42;
   font-weight: 500;
   color: currentColor;
   text-decoration: none;
-
-  &.active {
-    text-decoration: underline;
-  }
 }

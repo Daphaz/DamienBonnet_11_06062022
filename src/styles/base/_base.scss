@@ -13,4 +13,26 @@ html {
 body {
   font-family: $font-body;
   font-size: 1.6rem;
+  color: $clr-primary;
+  background-color: $clr-white;
+}
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+  min-height: 100vh;
+  transition: padding 0.3s ease;
+
+  @include lg {
+    padding: 0 80px;
+  }
+
+  @include md {
+    padding: 0 40px;
+  }
+
+  @include sm {
+    padding: 0 20px;
+  }
 }
