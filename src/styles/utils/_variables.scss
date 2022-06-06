@@ -1,0 +1,36 @@
+:root {
+  --font-body: 'Montserrat', sans-serif;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-primary: #ff6060;
+  --clr-grey-400: #c4c4c4;
+  --clr-grey-300: #e3e3e3;
+  --clr-grey-200: #f6f6f6;
+  --clr-gradient-black: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  --rad-xl: 25px;
+  --rad-sm: 10px;
+}
+
+/* #region  /**=========== Fonts =========== */
+$font-body: var(--font-body);
+/* #endregion  /**======== Fonts =========== */
+
+/* #region  /**=========== Colors =========== */
+$clr-white: var(--clr-white);
+$clr-black: var(--clr-black);
+$clr-primary: var(--clr-primary);
+$clr-grey-400: var(--clr-grey-400);
+$clr-grey-300: var(--clr-grey-300);
+$clr-grey-200: var(--clr-grey-200);
+
+$clr-gradient-black: var(--clr-gradient-black);
+/* #endregion  /**======== Colors =========== */
+
+/* #region  /**=========== Utils =========== */
+$rad-xl: var(--rad-xl);
+$rad-sm: var(--rad-sm);
+/* #endregion  /**======== Utils =========== */
