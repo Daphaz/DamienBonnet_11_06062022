@@ -1,12 +1,21 @@
-import { Layout } from '@/components/layout';
+import { useCallback, useEffect, useState } from 'react';
+
+import { HomeTemplate } from '@/components/template';
+
+import { housesService } from '@/api/houses.service';
+import { House } from '@/ts';
 
 export const Home = () => {
-  return (
-    <Layout>
-      <div className='home__hero'>
-        <img src='/images/bg-hero-home.jpg' alt='Hero home' />
-        <span>Chez vous, partout et ailleurs</span>
-      </div>
-    </Layout>
-  );
+  const [houses, setHouses] = useState<House[] | []>([]);
+
+  const fetchHouses = useCallback(async () => {
+    const datas = await housesService.getAll();
+    setHouses(datas);
+  }, []);
+
+  useEffect(() => {
+    fetchHouses();
+  }, [fetchHouses]);
+
+  return <HomeTemplate houses={houses} />;
 };
