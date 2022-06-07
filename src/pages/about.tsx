@@ -1,3 +1,5 @@
+import { AboutTemplate } from '@/components/template';
+
 export const About = () => {
-  return <div>About</div>;
+  return <AboutTemplate />;
 };

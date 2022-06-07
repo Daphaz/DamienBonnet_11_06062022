@@ -1,0 +1,25 @@
+.tags {
+  @extend %align;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 8px;
+
+  &__item {
+    background-color: $clr-primary;
+    color: $clr-white;
+    @extend %center;
+    height: 25px;
+    padding: 0 40px;
+    border-radius: $rad-sm;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1;
+
+    @include sm {
+      font-size: 1rem;
+      height: 18px;
+      padding: 0 30px;
+      border-radius: 5px;
+    }
+  }
+}

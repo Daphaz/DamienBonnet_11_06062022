@@ -18,10 +18,6 @@
     "prefix": "urf",
     "body": ["const ${1:someRef} = React.useRef($0)"]
   },
-	"Import style file":{
-		"prefix": "is",
-    "body": ["import './styles.scss'"]
-	},
   //#endregion  //*======== React ===========
 
   //#region  //*=========== Commons ===========

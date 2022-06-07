@@ -7,3 +7,16 @@
 @import './base/fonts';
 @import './base/reset';
 @import './base/base';
+
+@import './components/header';
+@import './components/footer';
+@import './components/thumb';
+@import './components/carousel';
+@import './components/rating';
+@import './components/tags';
+@import './components/dropdown';
+
+@import './pages/home';
+@import './pages/houseId';
+@import './pages/error';
+@import './pages/about';
