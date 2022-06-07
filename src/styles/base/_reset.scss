@@ -450,21 +450,6 @@ ul {
 					* https://github.com/tailwindcss/tailwindcss/issues/362
 					*/
 
-input:input-placeholder,
-textarea:input-placeholder {
-  color: #a0aec0;
-}
-
-input::input-placeholder,
-textarea::input-placeholder {
-  color: #a0aec0;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #a0aec0;
-}
-
 button,
 [role='button'] {
   cursor: pointer;
