@@ -1,0 +1,90 @@
+.home {
+  &__hero {
+    @extend %center;
+    position: relative;
+    width: 100%;
+    height: 223px;
+    overflow: hidden;
+    border-radius: $rad-xl;
+    color: $clr-white;
+    padding: 32px 16px;
+    transition: all 0.3s ease;
+
+    @include md {
+      justify-content: flex-start;
+      border-radius: $rad-sm;
+    }
+
+    @include sm {
+      height: 111px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      background: $clr-black;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    span {
+      @extend %title-48;
+      z-index: 1;
+      user-select: none;
+
+      @include md {
+        max-width: 217px;
+        line-height: 1;
+      }
+    }
+  }
+
+  &__list {
+    margin: 43px 0;
+    width: 100%;
+    @include sm {
+      margin: 20px 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 50px;
+    background-color: $clr-grey-200;
+    padding: 5.6rem 5rem;
+    border-radius: $rad-xl;
+    transition: all 0.3s ease;
+
+    @include xl {
+      grid-column-gap: 40px;
+      grid-row-gap: 30px;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 4.6rem 4rem;
+    }
+
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
+      border-radius: $rad-sm;
+    }
+
+    @include sm {
+      padding: 0;
+      grid-row-gap: 20px;
+      background-color: transparent;
+    }
+  }
+}
