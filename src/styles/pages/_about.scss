@@ -1,0 +1,42 @@
+.about {
+  &__hero {
+    position: relative;
+    display: block;
+    height: 223px;
+    border-radius: $rad-xl;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    @include sm {
+      margin-bottom: 19px;
+    }
+
+    img {
+      @extend %fit;
+      object-fit: cover;
+      object-position: center 35%;
+      @include sm {
+        object-position: right 50%;
+      }
+    }
+
+    &::after {
+      @extend %fit;
+      content: '';
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__section {
+    max-width: 1023px;
+    margin: 0 auto;
+    margin-bottom: 31px;
+    @include sm {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__warp {
+    display: grid;
+  }
+}
