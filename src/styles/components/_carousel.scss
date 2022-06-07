@@ -1,0 +1,82 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  overflow: hidden;
+  border-radius: $rad-xl;
+  transition: height 0.3s ease;
+
+  @include sm {
+    height: 255px;
+    border-radius: $rad-sm;
+  }
+
+  &__inner {
+    @extend %fit;
+    z-index: -1;
+  }
+
+  &__item {
+    position: absolute;
+    @extend %fit;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    img {
+      @extend %fit;
+      object-fit: cover;
+    }
+  }
+
+  &__arrow {
+    @extend %center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    -webkit-tap-highlight-color: transparent;
+    padding: 2.4rem;
+
+    @include sm {
+      padding: 0.8rem;
+
+      img {
+        width: 24px;
+        heigth: 24px;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__count {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    @extend %title-18;
+    color: $clr-white;
+
+    @include sm {
+      visibility: hidden;
+    }
+  }
+}

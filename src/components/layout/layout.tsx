@@ -5,14 +5,15 @@ import { Header } from './header';
 
 type Props = {
   children: ReactNode;
+  hideFooter?: boolean;
 };
 
-export const Layout = ({ children }: Props) => {
+export const Layout = ({ children, hideFooter = false }: Props) => {
   return (
     <>
       <Header />
       <main className='container'>{children}</main>
-      <Footer />
+      {!hideFooter && <Footer />}
     </>
   );
 };

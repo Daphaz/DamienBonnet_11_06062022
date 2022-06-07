@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header className='header container'>
       <Link to='/' className='header__logo'>
-        <img src='svg/logo-primary.svg' alt='Kasa' />
+        <img src='/svg/logo-primary.svg' alt='Kasa' />
       </Link>
 
       <nav>
