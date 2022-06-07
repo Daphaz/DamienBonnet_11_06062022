@@ -1,0 +1,40 @@
+.error {
+  flex: 1;
+  @extend %center;
+  text-align: center;
+
+  &__container {
+    h1 {
+      font-weight: 700;
+      font-size: clamp(9.6rem, 20vw, 28.8rem);
+      line-height: 1;
+      margin-bottom: 66px;
+      transition: all 0.3s ease;
+
+      @include md {
+        margin-bottom: 32px;
+      }
+
+      @include sm {
+        margin-bottom: 12px;
+      }
+    }
+
+    p {
+      @extend %title-36;
+      margin-bottom: 182px;
+      @include sm {
+        margin-bottom: 133px;
+        font-size: 1.8rem;
+      }
+    }
+
+    a {
+      @extend %title-18;
+      text-decoration: underline;
+      @include sm {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

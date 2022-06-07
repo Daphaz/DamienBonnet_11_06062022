@@ -6,13 +6,18 @@ import { Header } from './header';
 type Props = {
   children: ReactNode;
   hideFooter?: boolean;
+  flex?: boolean;
 };
 
-export const Layout = ({ children, hideFooter = false }: Props) => {
+export const Layout = ({
+  children,
+  hideFooter = false,
+  flex = false,
+}: Props) => {
   return (
     <>
       <Header />
-      <main className='container'>{children}</main>
+      <main className={flex ? 'container flex' : 'container'}>{children}</main>
       {!hideFooter && <Footer />}
     </>
   );
