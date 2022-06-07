@@ -15,7 +15,7 @@ const routes = [
   },
   {
     name: 'HouseId',
-    path: '/house/:id',
+    path: '/house/:houseId',
     element: HouseId,
   },
 ];
