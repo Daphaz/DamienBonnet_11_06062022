@@ -1,0 +1,79 @@
+.houseId {
+  &__content {
+    @extend %between;
+    padding: 3rem 0 2.4rem;
+
+    @include md {
+      display: block;
+    }
+
+    @include sm {
+      padding: 1.5rem 0 1.6rem;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    h2 {
+      @extend %title-36;
+    }
+
+    p {
+      @extend %title-18;
+      margin-bottom: 2rem;
+      @include sm {
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__extra {
+    @extend %flex-col;
+
+    @include md {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin: 1.6rem 0;
+    }
+  }
+
+  &__user {
+    @extend %align;
+    margin-bottom: 2.4rem;
+
+    @include sm {
+      margin-bottom: 0;
+    }
+
+    &_name {
+      @extend %title-18;
+      text-align: right;
+      width: 100%;
+
+      @include sm {
+        font-size: 1.2rem;
+      }
+    }
+
+    &_picture {
+      position: relative;
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      overflow: hidden;
+      margin-left: 1rem;
+
+      @include md {
+        width: 32px;
+        height: 32px;
+      }
+
+      img {
+        @extend %fit;
+        object-fit: cover;
+      }
+    }
+  }
+}
