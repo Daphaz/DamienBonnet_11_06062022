@@ -1,6 +1,6 @@
 import { House } from '@/ts';
 
-import { Carousel, Rating, Tags } from '../common';
+import { Carousel, DropDown, Rating, Tags } from '../common';
 import { Layout } from '../layout';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 
 export const HouseIdTemplate = ({ house }: Props) => {
   return (
-    <Layout>
+    <Layout hideFooter>
       <Carousel
         items={house.pictures.map((picture, idx) => ({
           id: idx,
@@ -43,6 +43,17 @@ export const HouseIdTemplate = ({ house }: Props) => {
           )}
           <Rating value={house.rating} />
         </div>
+      </section>
+
+      <section className='houseId__list'>
+        <DropDown label='Description'>{house.description}</DropDown>
+        <DropDown label='Équipements'>
+          <ul>
+            {house.equipments.map((item) => (
+              <li key={`equipement-${item}`}>{item}</li>
+            ))}
+          </ul>
+        </DropDown>
       </section>
     </Layout>
   );
