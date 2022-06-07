@@ -4,6 +4,7 @@
   height: 209px;
   color: $clr-white;
   background-color: $clr-black;
+  user-select: none;
 
   &__wrap {
     flex-shrink: 0;
