@@ -66,4 +66,17 @@
       }
     }
   }
+
+  &__count {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    @extend %title-18;
+    color: $clr-white;
+
+    @include sm {
+      visibility: hidden;
+    }
+  }
 }

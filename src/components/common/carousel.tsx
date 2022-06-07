@@ -65,6 +65,11 @@ export const Carousel = ({ items }: CarouselProps) => {
         })}
       </div>
       {needCarousel && <Arrow type='right' onClick={nextSlide} />}
+      {needCarousel && (
+        <span className='carousel__count'>{`${slideIndex - 1}/${
+          items.length - 1
+        }`}</span>
+      )}
     </div>
   );
 };
